@@ -17,9 +17,7 @@ lspconfig.clangd.setup({
     cmd = { "clangd" },
     filetypes = { "c", "cpp", "objc", "objcpp" },
     root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
-    settings = {
-        clangd = {
-            -- 你可以在这里添加其他 clangd 配置
-        },
+    capabilities = {
+        offsetEncoding = { "utf-8" }, -- 或者 "utf-8" 根据你的需要
     },
 })
